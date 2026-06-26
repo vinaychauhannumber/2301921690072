@@ -1,0 +1,33 @@
+# Node
+node_modules/
+dist/
+build/
+coverage/
+
+# MacOS
+.DS_Store
+
+# Environment
+.env
+.env.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log
+
+# Editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Next/Vite
+.next/
+out/
+.vite/
