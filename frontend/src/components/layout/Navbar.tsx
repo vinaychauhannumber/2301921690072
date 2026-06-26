@@ -39,7 +39,7 @@ export const Navbar: React.FC = () => {
       <Toolbar sx={{ justifyContent: 'space-between' }}>
         <Typography variant="h6" noWrap component="div" sx={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: 1 }}>
           <Box component="span" sx={{ color: 'primary.main', fontSize: 24 }}>✦</Box> 
-          Nexus SaaS
+          2301921690072
         </Typography>
 
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
@@ -146,7 +146,7 @@ export const Navbar: React.FC = () => {
             
             <MenuItem onClick={() => setNotifAnchorEl(null)} sx={{ py: 2, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
               <Box>
-                <Typography variant="body2" fontWeight="bold">Welcome to Nexus SaaS!</Typography>
+                <Typography variant="body2" fontWeight="bold">Welcome to 2301921690072!</Typography>
                 <Typography variant="caption" color="text.secondary">Your account has been successfully verified.</Typography>
                 <Typography variant="caption" display="block" color="primary" mt={0.5}>2 hours ago</Typography>
               </Box>
