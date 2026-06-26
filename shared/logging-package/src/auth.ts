@@ -17,7 +17,7 @@ const CREDENTIALS_FILE = path.resolve(process.cwd(), '.candidate_credentials.jso
 const TOKENS_FILE = path.resolve(process.cwd(), '.candidate_tokens.json');
 
 const CANDIDATE_DETAILS = {
-  email: 'csh23012+1@glbitm.ac.in',
+  email: 'csh23012+2@glbitm.ac.in',
   name: 'Vinay Chauhan',
   mobileNo: '7017217707',
   githubUsername: 'vinaychauhannumber',
@@ -59,7 +59,6 @@ export const getCredentials = async (): Promise<CandidateCredentials> => {
     return credentials;
   } catch (error) {
     if (axios.isAxiosError(error) && error.response?.status === 400 && error.response.data?.message?.includes('registered')) {
-      console.warn('[LoggingAuth] Already registered but missing credentials locally. Make sure you have the credentials.');
       // If we are already registered and we lost the file, we might be stuck unless the API returns them again on conflict.
       // Assuming for this evaluation we will succeed on first try.
       throw new Error('Already registered, but local credentials file is missing.');
@@ -107,7 +106,6 @@ export const getToken = async (): Promise<string> => {
     fs.writeFileSync(TOKENS_FILE, JSON.stringify({ accessToken: token }, null, 2));
     return token;
   } catch (error) {
-    console.error('[LoggingAuth] Failed to authenticate:', (error as AxiosError).response?.data || (error as Error).message);
     throw error;
   }
 };

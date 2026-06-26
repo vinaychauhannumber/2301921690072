@@ -27,7 +27,7 @@ export const Log = async (
   try {
     token = await getToken();
   } catch (error) {
-    console.error('[Logger] Failed to obtain token, cannot send log.', (error as Error).message);
+    // Fail silently or handle internally without console logging
     return;
   }
 
@@ -54,15 +54,14 @@ export const Log = async (
     // If token is expired or unauthorized, try to refresh and retry once
     if (err.response?.status === 401 || err.response?.status === 403) {
       try {
-        console.warn('[Logger] Token might be expired, refreshing...');
         const newToken = await refreshToken();
         await sendRequest(newToken);
         return;
       } catch (retryError) {
-        console.error('[Logger] Retry failed after token refresh:', (retryError as Error).message);
+        // Fail silently
       }
     } else {
-      console.error('[Logger] Failed to send log:', err.response?.data || err.message);
+      // Fail silently
     }
   }
 };

@@ -15,10 +15,10 @@
               { "key": "Content-Type", "value": "application/json" }
             ],
             "url": {
-              "raw": "http://localhost:5000/api/v1/auth/signup",
+              "raw": "http://localhost:5001/api/v1/auth/signup",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "5000",
+              "port": "5001",
               "path": ["api", "v1", "auth", "signup"]
             },
             "body": {
@@ -35,10 +35,10 @@
               { "key": "Content-Type", "value": "application/json" }
             ],
             "url": {
-              "raw": "http://localhost:5000/api/v1/auth/login",
+              "raw": "http://localhost:5001/api/v1/auth/login",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "5000",
+              "port": "5001",
               "path": ["api", "v1", "auth", "login"]
             },
             "body": {
@@ -55,10 +55,10 @@
               { "key": "Authorization", "value": "Bearer {{token}}" }
             ],
             "url": {
-              "raw": "http://localhost:5000/api/v1/auth/logout",
+              "raw": "http://localhost:5001/api/v1/auth/logout",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "5000",
+              "port": "5001",
               "path": ["api", "v1", "auth", "logout"]
             }
           }
